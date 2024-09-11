@@ -6,18 +6,18 @@
     <title>Document</title>
     <link rel="stylesheet" href="backgroound.css">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            $('#changColor').click(function() {
-                $('body').css('background-color', 
-                'rgb(' + Math.round(Math.random() * 255) + 
-                    ',' + Math.round(Math.random() * 255) + 
-                    ',' + Math.round(Math.random() * 255) + ')');
-            });
-        });
-    </script>
 </head>
 <body>
     <button id="changColor">Click Me Now!!</button>   
 </body>
+<script>
+    $(document).ready(function() {
+        $('#changColor').click(function() {
+            $('body').css('background-color', 
+            'rgb(' + Math.round(Math.random() * 255) + 
+                ',' + Math.round(Math.random() * 255) + 
+                ',' + Math.round(Math.random() * 255) + ')');
+        });
+    });
+</script>
 </html>
