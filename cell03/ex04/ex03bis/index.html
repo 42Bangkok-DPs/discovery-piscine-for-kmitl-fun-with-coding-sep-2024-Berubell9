@@ -13,11 +13,13 @@
             height: 600px;
             margin: 0 auto;
         }
-        p {
-            margin: 4px 0;
+        h1{
+            align-items: center;
+            justify-content: center;
+            display: flex;
         }
-        .container * {
-            border-radius: 8px;
+        p{
+            margin: 4px 0;
         }
         button {
             border: 1px black solid;
@@ -59,10 +61,8 @@
 </head>
 
 <body>
-    <div class="container">
-        <center>    
-            <h1>Todo List</h1>
-        </center>
+    <div class="container">  
+        <h1>Todo List</h1>
         <button id="new" onclick="newTodo()">New</button>
         <div id="ft_list"></div>
     </div>
