@@ -36,7 +36,7 @@
             </select>
             <input type="text" id="num2">
         </div>
-        <br><button style="align-items:center ;" onclick="calc()">Try me!</button>
+        <br><button style="align-items:center;" onclick="calc()">Try me!</button>
     </div>
 
     <script>
@@ -49,20 +49,21 @@
             if (num1 < 0 || num2 < 0 || isNaN(num1) || isNaN(num2)) {
                 alert("Error :(");
                 console.log("Error :(");
-            } else if (num2 == 0 && (operator == "/" || operator == "%")) {
+            } 
+            else if (num2 == 0 && (operator == "/" || operator == "%")) {
                 alert("It's over 9000!");
-                result = eval(`${num1} ${operator} ${num2}`);
-                console.log(result);
-            } else {
+                console.log("It's over 9000!");
+            } 
+            else {
                 result = eval(`${num1} ${operator} ${num2}`);
                 console.log(result);
                 alert(result);
             }
         }
+
         setInterval(() => {
             alert("Please, use me...")
         }, 30000);
-        
     </script>
 </body>
 </html>
