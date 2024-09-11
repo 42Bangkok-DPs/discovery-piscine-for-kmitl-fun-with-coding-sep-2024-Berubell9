@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+	<style>
+		.ball{
+            background-color: #C21010;
+            color: black;
+            height: 200px;
+            width: 200px;
+            border-radius: 50%;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+        }
+	</style>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <center> <div id="button" class="ball"></div></center>
+
+    <script type="text/javascript">
+        var x = 200;
+        var color = ["#C21010","#72D559","#35439c"]
+        var i = 0;
+
+        $(document).ready(function() {
+            // เพิ่มขนาดเมื่อคลิก
+            $('#button').on('click', function() {
+                x += 10;
+                i += 1;
+                if (x > 420) {
+                    x = 200;
+                    i = 0;
+                    $('#button').css('background-color', color[i]);
+                }
+                $(this).css({
+                    height: (x + 10) + "px",
+                    width: (x + 10) + "px"
+                });
+                if (i <= 2) {
+                    $(this).css('background-color', color[i]);
+                } 
+                else {
+                    i = 0;
+                    $(this).css('background-color', color[i]);
+                }
+            });
+
+            // ลดขนาดเมื่อเอาเมาส์ออก
+            $('#button').on('mouseout', function() {
+                i -= 1;
+                if (i >= 0) {
+                    $(this).css('background-color', color[i]);
+                } 
+                else {
+                    i = 2;
+                    $(this).css('background-color', color[i]);
+                }
+                if (x > 200) {
+                    x -= 5;
+                    $(this).css({
+                        height: (x - 5) + "px",
+                        width: (x - 5) + "px"
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
