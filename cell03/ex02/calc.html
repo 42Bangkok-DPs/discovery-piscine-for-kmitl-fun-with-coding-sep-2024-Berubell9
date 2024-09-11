@@ -26,7 +26,7 @@
     <div class="container">
         <h1>Calculator</h1>
         <div class="calc">
-            <input type="number" id="num1">
+            <input type="text" id="num1">
             <select id="operator">
                 <option value="+">+</option>
                 <option value="-">-</option>
@@ -34,7 +34,7 @@
                 <option value="/">/</option>
                 <option value="%">%</option>
             </select>
-            <input type="number" id="num2">
+            <input type="text" id="num2">
         </div>
         <br><button style="align-items:center ;" onclick="calc()">Try me!</button>
     </div>
@@ -46,7 +46,7 @@
             const operator = document.getElementById("operator").value;
             let result;
 
-            if (num1 < 0 || num2 < 0) {
+            if (num1 < 0 || num2 < 0 || num1 != String) {
                 alert("Error :(");
             } else if (num2 == 0 && (operator == "/" || operator == "%")) {
                 alert("It's over 9000!");
